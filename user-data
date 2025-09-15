@@ -1,0 +1,10 @@
+#cloud-config
+users:
+- name: root
+  groups: users,adm,dialout,audio,netdev,video,plugdev,cdrom,games,input,gpio,spi,i2c,render,sudo
+  shell: /bin/bash
+  lock_passwd: false
+  passwd: $5$HIp.UaiR9K$fyc89zJZvFKNqo/TT2MjBIb8q4FbWiicJBPKFvm..89
+
+ssh_pwauth: true
+
