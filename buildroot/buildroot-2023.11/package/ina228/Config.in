@@ -1,0 +1,4 @@
+config BR2_PACKAGE_INA228
+    bool "ina228 userspace utility"
+    help
+      Utility to communicate with the INA228 power monitor over I2C.

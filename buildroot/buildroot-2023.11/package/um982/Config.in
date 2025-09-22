@@ -1,0 +1,4 @@
+config BR2_PACKAGE_UM982
+    bool "um982 userspace utility"
+    help
+      Utility to communicate with the um982
