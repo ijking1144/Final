@@ -1,0 +1,31 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+		sleep 2
+		echo "mounting sd"
+		if [ ! -w /mnt ]; then
+        		mount -o remount,rw /
+    		fi
+		insmod /lib/modules/5.10.92-v7l/extra/spi.ko
+		if [ ! -e /mnt/sdcard ]; then 
+			mkdir -p /mnt/sdcard
+			chmod 777 /mnt/sdcard		
+		fi
+		mount -t vfat /dev/mmcblk0p1 /mnt/sdcard
+
+		if [ ! -e /mnt/sdcard/log.txt ]; then
+			touch /mnt/sdcard/log.txt
+		fi
+		;;
+	stop)
+		echo "dismounting sd"
+		sync
+		umount /mnt/sdcard
+		;;
+	*)
+		echo "Usage: $0 {start|stop}"
+	exit 1
+	;;
+esac
+exit 0

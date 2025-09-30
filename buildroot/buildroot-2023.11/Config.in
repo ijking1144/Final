@@ -989,5 +989,6 @@ source "package/ina228/Config.in"
 
 source "package/um982/Config.in"
 
+source "package/sd-card/Config.in"
 # br2-external menus definitions
 source "$BR2_BASE_DIR/.br2-external.in.menus"

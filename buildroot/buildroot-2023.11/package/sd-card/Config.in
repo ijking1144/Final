@@ -1,0 +1,4 @@
+config BR2_PACKAGE_SD_CARD
+    bool "sd kernelspace utility"
+    help
+      Utility to communicate with the sd card

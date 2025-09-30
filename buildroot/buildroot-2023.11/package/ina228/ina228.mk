@@ -14,6 +14,7 @@ endef
 
 define INA228_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/ina228 $(TARGET_DIR)/usr/bin/ina228
+    $(INSTALL) -D -m 0755 $(@D)/log.sh $(TARGET_DIR)/usr/bin/log.sh
 endef
 
 $(eval $(generic-package))

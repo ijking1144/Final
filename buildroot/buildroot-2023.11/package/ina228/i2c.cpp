@@ -47,14 +47,17 @@ int INA228::collect(){
     return -1;
   }
   if (success && (read_register(INA228_REG_VSBUS, voltage))==0){
-    printf("Voltage= %u\n",voltage);
+    float volt=static_cast<float>(voltage)*.0001953125f;
+    volt=volt*16;
+    printf("Voltage= %f\n",volt);
   }
   else{
     success = false;
     return -1;
   }
-  if (success && (read_register(INA228_REG_CURRENT, current))==0){
-    printf("Current= %u\n",current);
+  if (success && (read_register(INA228_REG_CURRENT, current))==0){\
+    float cur=static_cast<float>(current)*.0081;
+    printf("Current= %f\n",cur);
   }
   else{
     success = false;
