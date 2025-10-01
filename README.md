@@ -1,3 +1,5 @@
 Project Wiki Link
 https://github.com/ijking1144/Final/wiki
->>>>>>> a60d0e95e9a673e545e1a57fcd239870bb8edf9b
+
+Final Video Link
+https://drive.google.com/file/d/1x8kqfVKEEqUMe3d-ksue7Jc5GzFQI59P/view?usp=sharing
